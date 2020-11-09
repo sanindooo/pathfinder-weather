@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Sat Nov 07 2020 09:39:43 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5f8c9b459dbd0f3b85d72e11" data-wf-site="5f889eb9d82ca2647823d51e">
+<head>
+    <meta charset="utf-8">
+    <title>Pathfinder - Real Time Weather Data</title>
+    <meta content="Pathfinder provides accurate real-time weather data by combining the Mapbox and Weatherstack APIs. This project demonstrates Callback Chaining and plugin integration." name="description">
+    <meta content="Pathfinder - Real Time Weather Data" property="og:title">
+    <meta content="Pathfinder provides accurate real-time weather data by combining the Mapbox and Weatherstack APIs. This project demonstrates Callback Chaining and plugin integration." property="og:description">
+    <meta content="https://uploads-ssl.webflow.com/5f889eb9d82ca2647823d51e/5f8eba1393eab198b67dbbfd_home-share-image-min.jpg" property="og:image">
+    <meta content="Pathfinder - Real Time Weather Data" property="twitter:title">
+    <meta content="Pathfinder provides accurate real-time weather data by combining the Mapbox and Weatherstack APIs. This project demonstrates Callback Chaining and plugin integration." property="twitter:description">
+    <meta content="https://uploads-ssl.webflow.com/5f889eb9d82ca2647823d51e/5f8eba1393eab198b67dbbfd_home-share-image-min.jpg" property="twitter:image">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/webflow.css" rel="stylesheet" type="text/css">
+    <link href="css/pathfinder-weather.webflow.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    WebFont.load({
+        google: {
+            families: ["Rubik:regular,500,600,700,800", "Roboto:300,regular,500,700", "Mulish:regular,500,600,700"]
+        }
+    });
+    </script>
+    <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+    <script type="text/javascript">
+    !function(o, c) {
+        var n = c.documentElement,
+            t = " w-mod-";
+        n.className += t + "js",
+        ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+    }(window, document);
+    </script>
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/webclip.png" rel="apple-touch-icon">
+    <style>
+    /* Make nav buttons white */
+    a span {
+        background-color: white !important;
+    }/* Move nav buttons to top right corner */
+
+    div#fp-nav.right {
+        top: 10%;
+    }/* Fix flashing issue with safari browser */
+
+    .section {
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+    </style>
+</head>
+<body>
+    <div data-w-id="cae89e70-9bb7-b28b-679e-4ff10f779eb3" data-animation-type="lottie" data-src="documents/lottie-menu.json" data-loop="0" data-direction="1" data-autoplay="0" data-is-ix2-target="1" data-renderer="svg" data-default-duration="3.9583333333333335" data-duration="0" data-ix2-initial-state="0" class="lottie menu"></div>
+    <div id="fullpage" class="body-wrapper">
+        <div data-anchor="slide1" class="section _100vh _1">
+            <div class="container">
+                <div id="section1" class="flexbox vertical absolute">
+                    <div class="hero-header">
+                        <h1 class="header">PATHFINDER</h1>
+                        <p class="hero-text home">Real time weather data that you can depend on</p>
+                        <p data-w-id="7e1e3e59-bb48-56cb-8fc8-2399f1018500" style="opacity:0" class="hero-text sub">
+                            Retrieve accurate, live weather data 
+                            <br>
+                            for any location in the world.
+                        </p>
+                        <div class="buttons hero">
+                            <a href="weather-search" class="button hero w-button">Search Now</a>
+                            <a href="#slide5" class="button body ghost w-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lottie-wrapper">
+                    <a href="#slide2" class="link-block-2 w-inline-block">
+                        <div data-w-id="fb97b128-39a8-13ca-d120-bae878d4b186" data-animation-type="lottie" data-src="documents/lottie-scroll-down-arrow-1.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="1.5208333333333333" data-duration="0" class="down-arrow"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div data-anchor="slide2" class="section _100vh _2">
+            <div class="container">
+                <div class="flexbox vertical absolute b-left">
+                    <div class="description">
+                        <div class="no-overflow">
+                            <h2 class="section-heading">
+                                Plan your day 
+                                <br>
+                                with confidence
+                            </h2>
+                        </div>
+                        <div class="no-overflow">
+                            <p class="sub-text">We use precise coordinates in our application to get real-time weather data. No more rescheduling plans last minute.</p>
+                        </div>
+                        <div class="no-overflow">
+                            <a href="weather-search" class="button body w-button">Search Now</a>
+                            <a href="#slide5" class="button body ghost w-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-anchor="slide3" class="section _100vh _4">
+            <div class="container">
+                <div class="flexbox vertical absolute b-left">
+                    <div class="description">
+                        <div class="no-overflow">
+                            <h2 class="section-heading">Time. Resources. Opportunity.</h2>
+                        </div>
+                        <div class="no-overflow">
+                            <p class="sub-text">These are lost when plans fall through due to inaccurate data. We developed our application to prevent this from happening.</p>
+                        </div>
+                        <div class="no-overflow">
+                            <a href="weather-search" class="button body w-button">Search Now</a>
+                            <a href="#slide5" class="button body ghost w-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-anchor="slide4" class="section _100vh _3">
+            <div class="container">
+                <div class="flexbox vertical absolute b-left">
+                    <div class="description">
+                        <div class="no-overflow">
+                            <h2 class="section-heading">
+                                Reliable tools, 
+                                <br>
+                                reliable results
+                            </h2>
+                        </div>
+                        <div class="no-overflow">
+                            <p class="sub-text">The tools we’ve used are trusted by large, global organisations to provide accurate location and weather data worldwide.</p>
+                        </div>
+                        <div class="no-overflow">
+                            <a href="weather-search" class="button body w-button">Search Now</a>
+                            <a href="#slide5" class="button body ghost w-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-anchor="slide5" class="section _100vh _5">
+            <div data-animation="slide" data-easing="ease-in-out" data-duration="500" data-infinite="1" class="slider w-slider">
+                <div class="w-slider-mask">
+                    <div class="_w-slide w-slide">
+                        <img src="images/api-image2x-min.png" loading="eager" width="1250" sizes="(max-width: 479px) 85vw, (max-width: 991px) 73vw, 60vw" alt="" srcset="images/api-image2x-min-p-500.png 500w, images/api-image2x-min-p-800.png 800w, images/api-image2x-min-p-1080.png 1080w, images/api-image2x-min-p-1600.png 1600w, images/api-image2x-min-p-2000.png 2000w, images/api-image2x-min.png 2500w" class="ios _1">
+                        <div class="container">
+                            <div class="flexbox vertical absolute b-left dark">
+                                <div class="description left">
+                                    <h2 class="section-heading">
+                                        The Pathfinder 
+                                        <br>
+                                        weather solution
+                                    </h2>
+                                    <p class="sub-text">Our application converts your search text into exact coordinates using Mapbox. The coordinates are then used to retireve accurate, live weather data from Weatherstack. These APIs are both feature rich, lightweight and robust.</p>
+                                    <a href="weather-search" class="button body w-button">Search Now</a>
+                                    <a href="about" class="button body ghost w-button">About us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_w-slide _2 w-slide">
+                        <div class="container">
+                            <img src="images/mapbox-devices.png" loading="eager" width="766" sizes="(max-width: 479px) 68vw, (max-width: 991px) 73vw, 60vw" alt="" srcset="images/mapbox-devices-p-500.png 500w, images/mapbox-devices.png 1532w" class="ios _2">
+                            <div class="flexbox vertical absolute b-left dark">
+                                <div class="description left">
+                                    <img src="images/mapbox-svg.svg" loading="lazy" width="66" alt="" class="image">
+                                    <h2 class="section-heading">Mapbox</h2>
+                                    <p class="sub-text">Provides live map data to developers. Mapbox has over 700 million monthly active users and has been 100% carbon neutral as of 2018.</p>
+                                    <div class="buttons left">
+                                        <a href="weather-search" class="button body w-button">Search Now</a>
+                                        <a href="https://www.mapbox.com/" target="_blank" class="button ghost w-button">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_w-slide _3 w-slide">
+                        <div class="container">
+                            <img src="images/macbook-1.png" loading="eager" width="600" sizes="(max-width: 479px) 68vw, (max-width: 991px) 73vw, 60vw" alt="" srcset="images/macbook-1-p-500.png 500w, images/macbook-1-p-800.png 800w, images/macbook-1-p-1080.png 1080w, images/macbook-1-p-1600.png 1600w, images/macbook-1-p-2000.png 2000w, images/macbook-1.png 2146w" class="ios _3">
+                            <div class="flexbox vertical absolute b-left dark">
+                                <div class="description left">
+                                    <img src="images/weatherstack_logo_white.png" loading="lazy" width="202" alt="" class="image-2">
+                                    <h2 class="section-heading">Weatherstack</h2>
+                                    <p class="sub-text">Retrieves instant, accurate weather information for any location in the world in lightweight JSON format. Weatherstack is one of the first self-service based weather information web services offering weather data in real-time.</p>
+                                    <div class="buttons left">
+                                        <a href="weather-search" class="button body w-button">Search Now</a>
+                                        <a href="https://weatherstack.com/" target="_blank" class="button ghost w-button">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-arrow w-slider-arrow-left">
+                    <div class="w-icon-slider-left"></div>
+                </div>
+                <div class="right-arrow w-slider-arrow-right">
+                    <div class="w-icon-slider-right"></div>
+                </div>
+                <div class="slide-nav w-slider-nav w-shadow w-round"></div>
+            </div>
+        </div>
+    </div>
+    <div data-w-id="ead530b4-0888-ab33-2e01-319bbac96508" class="loader">
+        <div data-w-id="ead530b4-0888-ab33-2e01-319bbac96509" data-animation-type="lottie" data-src="documents/load-animation.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="2.125" data-duration="0" class="lottie"></div>
+    </div>
+    <nav class="menu-overlay">
+        <div class="menu-item top-left">
+            <h3 class="heading">
+                CREATED BY 
+                <span class="name">STEPHEN ANINDO</span>
+            </h3>
+            <a href="https://www.stephen-anindo.com/" target="_blank" class="link-block w-inline-block"></a>
+        </div>
+        <div class="menu-item _1">
+            <a href="/" aria-current="page" class="link-block w-inline-block w--current">
+                <h2 class="nav-link">HOME</h2>
+            </a>
+        </div>
+        <div class="menu-item _2">
+            <a href="about" class="link-block w-inline-block">
+                <h2 class="nav-link">ABOUT</h2>
+            </a>
+        </div>
+        <div class="menu-item _3">
+            <a href="help" class="link-block w-inline-block">
+                <h2 class="nav-link">WEATHER</h2>
+            </a>
+        </div>
+    </nav>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f889eb9d82ca2647823d51e" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/webflow.js" type="text/javascript"></script>
+    <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js" integrity="sha512-XOpdFagEEv9XMxN/2EdvFL/PfGtFDjX+AkRznsFHDtdC05YWdkMnz5JZUfrbnEabOQaMc7YNTl2xPbOu3J858Q==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" integrity="sha512-q54FvbV+gGBn+NvgaD4gpJ7w4wrO00DgW7Rx503PIhrf0CuMwLOwbS+bXgOBFSob+6GVy1HDPfaRLJ8w2jiS4g==" crossorigin="anonymous">
+    <script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            navigation: true,
+            scrollingSpeed: 800,
+            lazyLoading: false,
+            loopBottom: true,
+            loopTop: true
+        });
+    });
+    </script>
+</body>
+</html>
+
